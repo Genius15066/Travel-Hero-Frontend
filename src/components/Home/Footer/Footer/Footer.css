@@ -1,0 +1,15 @@
+.footer-area{
+    background-color: #3D4855;
+}
+
+.footer-area li{
+    padding-bottom: 10px;
+}
+
+.icon{
+    color:rgb(224, 196, 196);    
+}
+.title{
+    color:rgba(0, 255, 136, 0.849);
+    font-size:20px;
+}

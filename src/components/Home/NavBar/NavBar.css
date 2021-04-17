@@ -1,0 +1,16 @@
+.nav-bg{
+    background: linear-gradient(to right, #485563, #29323c);
+   /*background: linear-gradient(to right, #243B55, #141E30); */
+}
+.login{
+    background-color:rgb(16, 146, 206);
+    border-radius:5px;
+}
+.login:hover{
+    background-color:rgb(9, 148, 63); 
+   
+}
+.nav-btn:hover{
+    color:white;
+    transform:scale(1.2)
+}
