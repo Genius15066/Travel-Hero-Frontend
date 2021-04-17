@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import tourData from '../../../../Data/tours'
 import TourCard from '../TourCard/TourCard';
 
 const Tour = () => {
+   const [tours, setTours] = useState([]);
+
+   useEffect(() => {
+       fetch('http://localhost:3002/tours')
+       .then(res => res.json())
+       .then(data => setTours(data))
+   }, [tours._id])
+   console.log(tours)
     return (
        <Container>
          <div className="text-center">
@@ -12,7 +19,7 @@ const Tour = () => {
          </div>
             <Row>
            { 
-              tourData.map(data=><TourCard data={data}/>)
+              tours.map(data=><TourCard data={data}/>)
            } 
         </Row>
        </Container>

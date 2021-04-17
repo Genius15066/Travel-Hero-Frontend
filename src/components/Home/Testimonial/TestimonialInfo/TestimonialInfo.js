@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TestimonialInfo = (props) => {
-    const {quote,name,from ,img} = props.testimonial;
+    const {quote,name,from ,imageURL} = props.testimonial;
     return (
        <div className="col-md-4 card shadow-sm">
            <div className="card-body">
@@ -10,7 +10,7 @@ const TestimonialInfo = (props) => {
                </p>
            </div>
            <div className="card-footer d-flex align-items-center">
-               <img src={img} alt="" className="mx-3" width="60"/>
+               <img src={imageURL} alt="" className="mx-3" width="60"/>
                <div >
                    <h6 className="text-primary">{name}</h6>
                    <p className="m-0">{from}</p>

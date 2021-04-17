@@ -3,6 +3,7 @@
 }
 .tour-img{
     position: relative;
+    height:200px;
 }
 .tour-price{
     position: absolute;
@@ -19,4 +20,7 @@
 }
 .footer-style{
     background-color:rgb(208, 209, 199);
+}
+.tour-info{
+    height:400px
 }
