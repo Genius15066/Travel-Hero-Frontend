@@ -9,10 +9,10 @@ const OrderList = () => {
     const [order, setOrder] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3002/getOrder', {
+        fetch('https://limitless-castle-39279.herokuapp.com/getOrder', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({email:loggedInUser.email})
+            body: JSON.stringify({ email: loggedInUser.email })
         })
             .then(res => res.json())
             .then(data => setOrder(data))

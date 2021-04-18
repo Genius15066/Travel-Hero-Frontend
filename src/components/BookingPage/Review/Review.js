@@ -18,7 +18,7 @@ const Review = () => {
             from: from,
             quote: quote
         };
-        const url = `http://localhost:3002/addReview`;
+        const url = `https://limitless-castle-39279.herokuapp.com/addReview`;
 
         console.log(reviewData)
         fetch(url, {

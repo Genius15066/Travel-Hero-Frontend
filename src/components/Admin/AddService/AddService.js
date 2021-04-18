@@ -22,7 +22,7 @@ const AddService = () => {
             duration: tourDuration,
             description: tourDescription
         };
-        const url = `http://localhost:3002/addTour`;
+        const url = `https://limitless-castle-39279.herokuapp.com/addTour`;
 
         console.log(tourData)
         fetch(url, {

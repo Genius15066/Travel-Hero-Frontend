@@ -11,7 +11,7 @@ const SideBar = () => {
     const [isAdmin, setIsAdmin] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:3002/isadmin', {
+        fetch('https://limitless-castle-39279.herokuapp.com/isadmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -50,25 +50,25 @@ const SideBar = () => {
                     </Link>
                 </li>
                 {
-                    isAdmin &&  <div>
-                    <li>
-                        <Link to="/dashboard/addService" className="text-white">
-                            <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/dashboard/makeAdmin" className="text-white">
-                            <FontAwesomeIcon icon={faShieldAlt} /> <span>Make Admin</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/dashboard/manage" className="text-white">
-                            <FontAwesomeIcon icon={faTasks} /> <span>Manage Service</span>
-                        </Link>
-                    </li>
-                </div>
+                    isAdmin && <div>
+                        <li>
+                            <Link to="/dashboard/addService" className="text-white">
+                                <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/dashboard/makeAdmin" className="text-white">
+                                <FontAwesomeIcon icon={faShieldAlt} /> <span>Make Admin</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/dashboard/manage" className="text-white">
+                                <FontAwesomeIcon icon={faTasks} /> <span>Manage Service</span>
+                            </Link>
+                        </li>
+                    </div>
                 }
-               
+
 
 
 

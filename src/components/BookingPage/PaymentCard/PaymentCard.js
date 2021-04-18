@@ -38,7 +38,7 @@ const PaymentCard = (props) => {
     }
 
 
-    const url = `http://localhost:3002/addDeals`;
+    const url = `https://limitless-castle-39279.herokuapp.com/addDeals`;
     fetch(url, {
       method: 'POST',
       headers: {

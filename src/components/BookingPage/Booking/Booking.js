@@ -21,7 +21,7 @@ const Booking = () => {
     const [booking, setBooking] = useState(false)
 
     useEffect(() => {
-        const url = `http://localhost:3002/tour/${id}`
+        const url = `https://limitless-castle-39279.herokuapp.com/tour/${id}`
         console.log(url)
         fetch(url)
             .then(res => res.json())

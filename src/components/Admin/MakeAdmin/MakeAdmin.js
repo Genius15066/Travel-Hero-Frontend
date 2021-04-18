@@ -11,7 +11,7 @@ const MakeAdmin = () => {
         const adminPanel = {
             email: admin
         };
-        const url = `http://localhost:3002/addAdmin`;
+        const url = `https://limitless-castle-39279.herokuapp.com/addAdmin`;
 
         fetch(url, {
             method: 'POST',
