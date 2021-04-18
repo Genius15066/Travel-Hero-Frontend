@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Col } from 'react-bootstrap';
-import SideBar from '../SideBar/SideBar';
+import SideBar from "../../shared/SideBar/SideBar"
 import axios from 'axios';
 import { useForm } from "react-hook-form";
 

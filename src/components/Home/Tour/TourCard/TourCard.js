@@ -3,9 +3,16 @@ import { Card, Col } from 'react-bootstrap';
 import './TourCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
+import { useHistory } from 'react-router';
 
 const TourCard = (props) => {
-    const { imageURL, description, cost, duration, title } = props.data;
+    const { imageURL, description, cost, duration, title,_id } = props.data;
+
+    const history=useHistory()
+    const handleClick=(data)=>{
+        const url=`/booking/book/${_id}`
+        history.push(url)
+    }
     return (
         <Col md={4}>
             <div className="tour-container">
@@ -18,7 +25,7 @@ const TourCard = (props) => {
             </div>
 
             <div >
-                <Card className="tour-info">
+                <Card className="tour-info" onClick={()=>handleClick(props.data)}>
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>{description}</Card.Text>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Col, Form } from 'react-bootstrap';
-import AdminSideBar from '../AdminSideBar/AdminSideBar';
 import './AddService.css'
 import axios from 'axios';
 import { useForm } from "react-hook-form";
+import SideBar from '../../shared/SideBar/SideBar'
 
 const AddService = () => {
 
@@ -70,7 +70,7 @@ const AddService = () => {
 
     return (
         <div className="row" >
-            <AdminSideBar />
+            <SideBar/>
             <div className="col-md-10 p-4" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
                 <div className="d-flex justify-content-between">
                     <h5>Add Service</h5>

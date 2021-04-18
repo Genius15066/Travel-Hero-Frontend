@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import { UserContext } from '../../../App';
 import './NavBar.css'
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
+    const [loggedInUser] = useContext(UserContext)
+    let isSignedInUser = false;
+    if (loggedInUser.name) {
+        isSignedInUser = true
+    }
+    const { photoURL } = loggedInUser
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" className="nav-bg" variant="dark">
-                <Navbar.Brand href="/home" className="mx-3">Travel Hero</Navbar.Brand>
+                <Navbar.Brand to="/home" className="mx-3">Travel Hero</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Link className="mx-md-3 mx-auto nav-btn" href="/home">Home</Nav.Link>
-                        <Nav.Link className="mx-md-3 mx-auto nav-btn" href="/about">About</Nav.Link>
-                        <Nav.Link className="mx-md-3 mx-auto nav-btn" href="/services">Projects</Nav.Link>
-                        <Nav.Link className="mx-md-3 mx-auto nav-btn" href="/reviews">Reviews</Nav.Link>
-                        <Nav.Link className="mx-md-3 mx-auto nav-btn" href="/admin">Admin</Nav.Link>
-                        <Nav.Link className="mx-md-3 mx-auto text-white px-3 login" href="/Login">Login</Nav.Link>
+                        <Link className="mx-md-3 mx-auto text-none nav-btn" to="/home">Home</Link>
+                        <Link className="mx-md-3 mx-auto nav-btn" to="/about">About</Link>
+                        <Link className="mx-md-3 mx-auto nav-btn" to="/services">Projects</Link>
+                        <Link className="mx-md-3 mx-auto nav-btn" to="/reviews">Reviews</Link>
+                        <Link className="mx-md-3 mx-auto nav-btn" to="/admin">Admin</Link>
+
+                        {
+                            isSignedInUser ? <Link className="mx-md-3 mx-auto text-white px-3 " to="/login"><img className="sign-in-image" src={photoURL} alt="" /></Link> :
+                                <Link className="mx-md-3 mx-auto text-white px-3 py-1 login" to="/Login">Login</Link>
+                        }
+
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart,faThList,faComment} from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart,faThList,faComment,faPlus} from '@fortawesome/free-solid-svg-icons';
 import {  Link } from "react-router-dom";
 import './SideBar.css'
 
@@ -21,6 +21,27 @@ const SideBar = () => {
             <li>
                 <Link to="/booking/review" className="text-white">
                     <FontAwesomeIcon icon={faComment} /> <span>Review</span>
+                </Link>
+            </li> 
+
+              <li>
+                <Link to="/admin/orderlist" className="text-white">
+                    <FontAwesomeIcon icon={faShoppingCart} /> <span>Order List</span> 
+                </Link>
+            </li>
+            <li>
+                <Link to="/admin/addService" className="text-white">
+                    <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span> 
+                </Link>
+            </li>
+            <li>
+                <Link to="/admin/makeAdmin" className="text-white">
+                    <FontAwesomeIcon icon={faComment} /> <span>Make Admin</span>
+                </Link>
+            </li> 
+            <li>
+                <Link to="/admin/manage" className="text-white">
+                    <FontAwesomeIcon icon={faComment} /> <span>Manage Service</span>
                 </Link>
             </li>  
         </ul>
