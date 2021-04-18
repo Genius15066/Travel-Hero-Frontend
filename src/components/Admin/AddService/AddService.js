@@ -51,7 +51,6 @@ const AddService = () => {
     }
 
     const handleImageUpload = event => {
-        console.log(event.target.files[0])
         const imageData = new FormData();
         imageData.set('key', '2f898a3b8cf9ed048515426724ba1cf7');
         imageData.append('image', event.target.files[0]);

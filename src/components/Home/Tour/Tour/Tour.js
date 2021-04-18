@@ -10,7 +10,6 @@ const Tour = () => {
          .then(res => res.json())
          .then(data => setTours(data))
    }, [tours._id])
-   console.log(tours)
    return (
       <Container>
          <div className="text-center">
@@ -19,7 +18,7 @@ const Tour = () => {
          </div>
          <Row>
             {
-               tours.map(data => <TourCard data={data} />)
+               tours.map(data => <TourCard data={data} key={data._id} />)
             }
          </Row>
       </Container>

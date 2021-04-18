@@ -4,8 +4,7 @@ import SideBar from '../../shared/SideBar/SideBar'
 
 const OrderList = () => {
     const [loggedInUser] = useContext(UserContext)
-    console.log(loggedInUser)
-    const { photoURL, email } = loggedInUser
+    const { photoURL} = loggedInUser
     const [order, setOrder] = useState([])
 
     useEffect(() => {
@@ -16,8 +15,7 @@ const OrderList = () => {
         })
             .then(res => res.json())
             .then(data => setOrder(data))
-    }, [])
-    console.log(order)
+    }, [loggedInUser.email ])
     return (
         <div className="row" >
             <SideBar />

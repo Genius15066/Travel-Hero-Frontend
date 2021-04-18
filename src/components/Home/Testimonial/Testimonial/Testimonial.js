@@ -11,7 +11,7 @@ const Testimonial = () => {
             .then(res => res.json())
             .then(data => setReview(data))
     }, [review._id])
-    console.log(review)
+   
 
     return (
         <section className="testimonials my-5 py-5">
@@ -25,7 +25,7 @@ const Testimonial = () => {
 
                 <div className="row card-deck mt-5">
                     {
-                        review.map(testimonial => <TestimonialInfo testimonial={testimonial} />)
+                        review.map(testimonial => <TestimonialInfo key={testimonial._id} testimonial={testimonial} />)
                     }
                 </div>
             </div>

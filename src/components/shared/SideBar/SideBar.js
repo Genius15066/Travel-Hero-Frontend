@@ -6,8 +6,7 @@ import './SideBar.css'
 import { UserContext } from '../../../App';
 
 const SideBar = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [allAdmin, setAllAdmin] = useState([]);
+    const [loggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false)
 
     useEffect(() => {
@@ -18,9 +17,8 @@ const SideBar = () => {
         })
             .then(res => res.json())
             .then(data => setIsAdmin(data));
-    }, [])
+    }, [loggedInUser.email])
 
-    console.log(isAdmin)
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 col-sm-12 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
