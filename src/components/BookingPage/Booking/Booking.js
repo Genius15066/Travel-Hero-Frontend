@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { UserContext } from '../../../App';
 import { Form, Col } from 'react-bootstrap';
 import SideBar from "../../shared/SideBar/SideBar"
+import './Booking.css'
 
 const Booking = () => {
     const { id } = useParams()
@@ -67,7 +68,7 @@ const Booking = () => {
                         <p className="text-muted">You have to click on input field for checking your data</p>
                         <Form.Group as={Col} >
                             <Form.Label>Name</Form.Label> <br />
-                            <input type="text" id="user-name" name="user-name" value={name} onBlur={handleload} />
+                            <input  type="text" id="user-name" name="user-name" value={name} onBlur={handleload} />
                         </Form.Group>
                         <Form.Group as={Col} >
                             <Form.Label>Email</Form.Label> <br />

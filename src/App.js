@@ -12,6 +12,7 @@ import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 
 import PrivateRoute from "./components/shared/PrivateRoute/PrivateRoute";
 import ManageProduct from "./components/Admin/ManageService/ManageProduct/ManageProduct";
+import NotFound from "./components/shared/NotFound/NotFound";
 
 export const UserContext = createContext()
 
@@ -63,6 +64,9 @@ function App() {
 
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
 
         </Switch>
