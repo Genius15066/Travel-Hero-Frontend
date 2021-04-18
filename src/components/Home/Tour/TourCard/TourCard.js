@@ -15,7 +15,8 @@ const TourCard = (props) => {
     }
     return (
         <Col  md={4} onClick={()=>handleClick(props.data)}>
-            <div className="tour-container mt-5">
+         <div className="tour-style">
+         <div className="tour-container mt-5">
                 <div className="tour-img">
                     <img src={imageURL} className="w-100 tour-img" alt="" />
                 </div>
@@ -35,6 +36,7 @@ const TourCard = (props) => {
                     </Card.Footer>
                 </Card>
             </div>
+         </div>
 
         </Col>
     );
