@@ -1,11 +1,12 @@
 import React from 'react';
 import TeamMemberCard from '../TeamMemberCard/TeamMemberCard';
 
+
 const TeamMember = () => {
     return (
         <section >
         <div className="container">
-            <h5 className="text-center  text-primary mb-5">Our Members</h5>
+            <h4 className="text-center  text-primary mb-5">Our Members</h4>
             <div className="row">
                 <TeamMemberCard/>
                 <TeamMemberCard/>

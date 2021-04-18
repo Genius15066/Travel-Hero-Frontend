@@ -12,3 +12,6 @@
     background: transparent;
     border: 0;
 }
+.review-style{
+    box-shadow:5px 5px 5px grey;
+}

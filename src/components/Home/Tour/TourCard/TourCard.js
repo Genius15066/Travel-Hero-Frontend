@@ -14,8 +14,8 @@ const TourCard = (props) => {
         history.push(url)
     }
     return (
-        <Col md={4}>
-            <div className="tour-container">
+        <Col  md={4} onClick={()=>handleClick(props.data)}>
+            <div className="tour-container mt-5">
                 <div className="tour-img">
                     <img src={imageURL} className="w-100 tour-img" alt="" />
                 </div>
@@ -25,10 +25,10 @@ const TourCard = (props) => {
             </div>
 
             <div >
-                <Card className="tour-info" onClick={()=>handleClick(props.data)}>
+                <Card className="tour-info" >
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
-                        <Card.Text>{description}</Card.Text>
+                        <p className="tour-des">{description}</p>
                     </Card.Body>
                     <Card.Footer className="footer-style">
                      <small>  <FontAwesomeIcon  icon={faClock} /> {duration} days </small>

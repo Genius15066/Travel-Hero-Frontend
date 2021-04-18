@@ -17,10 +17,10 @@ const Testimonial = () => {
         <section className="testimonials my-5 py-5">
             <div className="container text-center">
                 <div className="section-header">
-                    <h5 className="text-primary text-uppercase">
-                        Testimonial
+                    <h5 className="text-success text-uppercase">
+                        ReView
                   </h5>
-                    <h3>What Our Client Says</h3>
+                    <h3 className="text-primary" > Our Clients Opinions</h3>
                 </div>
 
                 <div className="row card-deck mt-5">

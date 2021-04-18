@@ -9,7 +9,9 @@ import AddService from "./components/Admin/AddService/AddService";
 import Login from "./components/Login/Login";
 import { createContext, useState } from "react";
 import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
+
 import PrivateRoute from "./components/shared/PrivateRoute/PrivateRoute";
+import ManageProduct from "./components/Admin/ManageService/ManageProduct/ManageProduct";
 
 export const UserContext = createContext()
 
@@ -39,9 +41,9 @@ function App() {
           </PrivateRoute>
 
 
-          <Route exact path="/dashboard">
+          <PrivateRoute exact path="/dashboard">
             <OrderList />
-          </Route>
+          </PrivateRoute>
           <Route path="/dashboard/orderList">
             <OrderList />
           </Route>
@@ -51,6 +53,13 @@ function App() {
           <Route path="/dashboard/makeAdmin">
             <MakeAdmin />
           </Route>
+          <Route path="/dashboard/manage">
+            <ManageProduct />
+          </Route>
+
+          <PrivateRoute path="/admin">
+             <OrderList />
+          </PrivateRoute>
 
           <Route path="/login">
             <Login />
