@@ -43,7 +43,13 @@ const OrderList = () => {
                                 <td>{data.email}</td>
                                 <td>{data.destination}</td>
                                 <td>{data.payment.card.brand} {data.payment.type}</td>
-                                <td></td>
+                                <td>
+                                    <select >
+                                        <option className="bg-warning text-secondary">Pending</option>
+                                        <option className="bg-success text-secondary">Approved</option>
+                                        <option className="bg-danger text-secondary">Rejected</option>
+                                    </select>
+                                </td>
 
                             </tr>)
                         }
