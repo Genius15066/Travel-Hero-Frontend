@@ -21,7 +21,7 @@ const NavBar = () => {
                         <Link className="mx-md-3 mx-auto text-none nav-btn" to="/home">Home</Link>
                         <Link className="mx-md-3 mx-auto nav-btn" to="/about">About</Link>
                         <Link className="mx-md-3 mx-auto nav-btn" to="/services">Projects</Link>
-                        <Link className="mx-md-3 mx-auto nav-btn" to="/reviews">Reviews</Link>
+                        <Link className="mx-md-3 mx-auto nav-btn" to="/dashboard">Dashboard</Link>
                         <Link className="mx-md-3 mx-auto nav-btn" to="/admin">Admin</Link>
 
                         {

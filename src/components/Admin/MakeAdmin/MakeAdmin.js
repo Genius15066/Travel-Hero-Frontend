@@ -5,11 +5,11 @@ import { useForm } from "react-hook-form";
 
 const MakeAdmin = () => {
     const { handleSubmit } = useForm();
-    const[admin,setAdmin]=useState(null)
+    const [admin, setAdmin] = useState(null)
 
     const onSubmit = data => {
         const adminPanel = {
-           admin:admin
+            email: admin
         };
         const url = `http://localhost:3002/addAdmin`;
 
@@ -24,7 +24,7 @@ const MakeAdmin = () => {
     };
 
     const handleChange = (e) => {
-        if (e.target.name === 'admin') {
+        if (e.target.name === 'email') {
             setAdmin(e.target.value)
         }
     }
@@ -36,7 +36,7 @@ const MakeAdmin = () => {
                 <Form className="col-md-6" onSubmit={handleSubmit(onSubmit)}>
                     <Form.Group as={Col} >
                         <Form.Label>Admin Email</Form.Label>
-                        <Form.Control type="email" name="admin" placeholder="Enter admin email" onChange={handleChange} />
+                        <Form.Control type="email" name="email" placeholder="Enter admin email" onChange={handleChange} />
                     </Form.Group>
 
                     <button className="btn btn-success mx-3" type="submit">

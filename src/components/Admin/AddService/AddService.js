@@ -20,7 +20,7 @@ const AddService = () => {
             imageURL: imageURL,
             cost: tourCost,
             duration: tourDuration,
-            description:tourDescription
+            description: tourDescription
         };
         const url = `http://localhost:3002/addTour`;
 
@@ -70,7 +70,7 @@ const AddService = () => {
 
     return (
         <div className="row" >
-            <SideBar/>
+            <SideBar />
             <div className="col-md-10 p-4" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
                 <div className="d-flex justify-content-between">
                     <h5>Add Service</h5>
@@ -81,12 +81,12 @@ const AddService = () => {
                         <Form.Row>
                             <Form.Group as={Col} >
                                 <Form.Label>Title</Form.Label>
-                                <Form.Control type="text" name="title" placeholder="Enter title" onChange={handleChange}/>
+                                <Form.Control type="text" name="title" placeholder="Enter title" onChange={handleChange} />
                             </Form.Group>
 
                             <Form.Group as={Col} >
                                 <Form.Label>Cost</Form.Label>
-                                <Form.Control name="cost" type="text" placeholder="Enter Cost" onChange={handleChange}/>
+                                <Form.Control name="cost" type="text" placeholder="Enter Cost" onChange={handleChange} />
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>

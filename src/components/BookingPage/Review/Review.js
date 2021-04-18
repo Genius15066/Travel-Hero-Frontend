@@ -7,16 +7,16 @@ import { useForm } from "react-hook-form";
 const Review = () => {
     const { handleSubmit } = useForm();
     const [imageURL, setIMageURL] = useState(null);
-    const [name,setName] = useState(null);
-    const [from,setFrom] = useState(null);
-    const [quote,setQuote] = useState(null);
+    const [name, setName] = useState(null);
+    const [from, setFrom] = useState(null);
+    const [quote, setQuote] = useState(null);
 
     const onSubmit = data => {
         const reviewData = {
             name: name,
             imageURL: imageURL,
-            from:from,
-            quote:quote
+            from: from,
+            quote: quote
         };
         const url = `http://localhost:3002/addReview`;
 
@@ -41,7 +41,7 @@ const Review = () => {
         if (e.target.name === 'quote') {
             setQuote(e.target.value)
         }
-       
+
 
     }
 

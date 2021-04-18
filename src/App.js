@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/Home/Home/Home";
 import Booking from "./components/BookingPage/Booking/Booking";
 import Review from "./components/BookingPage/Review/Review";
-import BookingList from "./components/BookingPage/BookingList/BookingList";
 import OrderList from "./components/Admin/OrderList/OrderList";
 import AddService from "./components/Admin/AddService/AddService";
 import Login from "./components/Login/Login";
 import { createContext, useState } from "react";
 import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
+import PrivateRoute from "./components/shared/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext()
 
@@ -28,34 +28,28 @@ function App() {
             <Home />
           </Route>
 
-          <Route exact path="/booking">
-            <Booking />
-          </Route>
-          <Route path="/booking/review">
+          <Route path="/dashboard/review">
             <Review />
           </Route>
-          <Route path="/booking/book/:id">
+          <Route exact path="/dashboard/book">
             <Booking />
           </Route>
-          <Route path="/booking/bookinglist">
-            <BookingList />
-          </Route>
+          <PrivateRoute path="/dashboard/book/:id">
+            <Booking />
+          </PrivateRoute>
 
 
-          <Route exact path="/admin">
+          <Route exact path="/dashboard">
             <OrderList />
           </Route>
-          <Route path="/admin/orderList">
+          <Route path="/dashboard/orderList">
             <OrderList />
           </Route>
-          <Route path="/admin/addService">
+          <Route path="/dashboard/addService">
             <AddService />
           </Route>
-          <Route path="/admin/makeAdmin">
-            <MakeAdmin/>
-          </Route>
-          <Route path="/booking/bookinglist">
-            <BookingList />
+          <Route path="/dashboard/makeAdmin">
+            <MakeAdmin />
           </Route>
 
           <Route path="/login">

@@ -10,7 +10,7 @@ const TourCard = (props) => {
 
     const history=useHistory()
     const handleClick=(data)=>{
-        const url=`/booking/book/${_id}`
+        const url=`/dashboard/book/${_id}`
         history.push(url)
     }
     return (

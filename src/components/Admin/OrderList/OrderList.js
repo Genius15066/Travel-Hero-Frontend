@@ -7,11 +7,12 @@ const OrderList = () => {
     console.log(loggedInUser)
     const { photoURL, email } = loggedInUser
     const [order, setOrder] = useState([])
+
     useEffect(() => {
         fetch('http://localhost:3002/getOrder', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify()
+            body: JSON.stringify({email:loggedInUser.email})
         })
             .then(res => res.json())
             .then(data => setOrder(data))
@@ -27,24 +28,24 @@ const OrderList = () => {
                 </div>
                 <table className="table table-borderless">
                     <thead>
-                     <tr className="text-center">
-                     <th>Name</th>
-                        <th>Email</th>
-                        <th>Destination</th>
-                        <th>Pay With</th>
-                        <th>Status</th>
-                     </tr>
+                        <tr className="text-center">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Destination</th>
+                            <th>Pay With</th>
+                            <th>Status</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {
                             order.map(data => <tr className="text-center">
-                               <td>{data.name}</td>
-                               <td>{data.email}</td>
-                               <td>{data.destination}</td>
-                               <td>{data.payment.card.brand} {data.payment.type}</td>
-                               <td></td>
-                                
-                                </tr>)
+                                <td>{data.name}</td>
+                                <td>{data.email}</td>
+                                <td>{data.destination}</td>
+                                <td>{data.payment.card.brand} {data.payment.type}</td>
+                                <td></td>
+
+                            </tr>)
                         }
                     </tbody>
                 </table>

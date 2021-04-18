@@ -1,5 +1,5 @@
 .sidebar{
-    background-image: linear-gradient(40deg, #19d3ae,#0fcfec);
+    background-image: linear-gradient(180deg, #1954d3,#0fecce);
     position: fixed;
 }
 .sidebar li{
@@ -7,8 +7,8 @@
 }
 .sidebar li:hover span{
     display: inline-block;
-    transform: translate(5px);
+    transform: scale(1.1);
 }
 .sidebar svg{
-    margin-right: 5px;
+    margin-right: 15px;
 }

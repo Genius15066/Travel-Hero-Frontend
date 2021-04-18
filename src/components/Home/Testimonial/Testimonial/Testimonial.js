@@ -3,15 +3,15 @@ import TestimonialInfo from '../TestimonialInfo/TestimonialInfo';
 import './Testimonial.css'
 
 const Testimonial = () => {
- 
-  const [review, setReview] = useState([]);
 
-   useEffect(() => {
-       fetch('http://localhost:3002/review')
-       .then(res => res.json())
-       .then(data => setReview(data))
-   }, [review._id])
-   console.log(review)
+    const [review, setReview] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3002/review')
+            .then(res => res.json())
+            .then(data => setReview(data))
+    }, [review._id])
+    console.log(review)
 
     return (
         <section className="testimonials my-5 py-5">
